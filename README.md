@@ -45,11 +45,6 @@ WHEN I click on the links in the Table of Contents
 
 THEN I am taken to the corresponding section of the README
 
-
-<h1> URL Links </h1>
-
-Deployed Webpage:
-
-<h1> Screenshot </h1>
-
-<img src="">
+ <h1> Installation </h1>
+I used Inquirer for this project. A Node npm. 
+ 
