@@ -1,7 +1,7 @@
 <h1> Professional-README-Generator
  </h1>
 
-My project here is all about using Node.js and Inquire in order to make a generator for read.me files. 
+My project here is all about using Node.js and Inquire in order to make a generator for read.me files. There is a sample readme in the develop folder.
 
 <h1> User Story </h1>
 
