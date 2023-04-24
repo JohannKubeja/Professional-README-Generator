@@ -51,3 +51,9 @@ I used Inquirer for this project. A Node npm.
 <h1> Screenshot in Action </h1>
 
 <img src="Project Generator .png">
+
+<h1> Walkthrough Video </h1>
+
+<video width="320" height="240" autoplay>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
