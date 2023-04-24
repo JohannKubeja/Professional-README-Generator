@@ -48,3 +48,6 @@ THEN I am taken to the corresponding section of the README
  <h1> Installation </h1>
 I used Inquirer for this project. A Node npm. 
  
+<h1> Screenshot in Action </h1>
+
+<img src="Project Generator .png">
