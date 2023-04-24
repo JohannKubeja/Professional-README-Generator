@@ -53,5 +53,6 @@ I used Inquirer for this project. A Node npm.
 <img src="Project Generator .png">
 
 <h1> Walkthrough Video </h1>
-  <video src="Untitled_ Apr 23, 2023 7_27 PM.mp4">
+
+https://user-images.githubusercontent.com/116978562/233891552-082c9a88-d9d2-4a0e-9a0b-be5080961b50.mp4
 
