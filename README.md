@@ -53,7 +53,5 @@ I used Inquirer for this project. A Node npm.
 <img src="Project Generator .png">
 
 <h1> Walkthrough Video </h1>
-
-<video width="320" height="240" autoplay>
   <source src="Untitled_ Apr 23, 2023 7_27 PM.mp4">
 
