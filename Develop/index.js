@@ -1,71 +1,86 @@
 // TODO: Include packages needed for this application
-const inquirer = require('inquirer');
+const fs = require("fs");
+const {writeFile} = fs.promises
+const inquirer = require("inquirer");
+const path = require("path");
+const generateMarkdown = require("./utils/generateMarkdown");
+
+
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
-      type: 'input',
-      name: 'title',
-      message: "What is your project's title?",
+        type: "input",
+        name: "title",
+        message: "Name the title of your project"
     },
     {
-      type: 'input',
-      name: 'description',
-      message: 'Please provide a short description of your project:',
+        type: "input",
+        name: "description",
+        message: "Describe your project"
+    },
+    
+    {
+        type: "input",
+        name: "installation",
+        message: "What installation method did you use?"
     },
     {
-      type: 'input',
-      name: 'installation',
-      message: 'Please provide installation instructions:',
+        type: "checkbox",
+        name: "usage",
+        message: "What languages are used in this project",
+        choices: ["HTML", "CSS", "JavaScript"],
     },
     {
-      type: 'input',
-      name: 'usage',
-      message: 'Please provide usage information:',
+        type: "list",
+        name: "license",
+        message: "What License works on this project",
+        choices: ["Apache", "Boost", "BSD"],
     },
     {
-      type: 'input',
-      name: 'contributing',
-      message: 'Please provide contribution guidelines:',
+        type: "input",
+        name: "contributing",
+        message: "How should people contribute to this project?"
     },
     {
-      type: 'input',
-      name: 'tests',
-      message: 'Please provide test instructions:',
+        type: "input",
+        name: "tests",
+        message: "How will you test this project?"
+    },
+
+    {
+        type: "input",
+        name: "questions",
+        message: "What questions do you have?",
     },
     {
-      type: 'list',
-      name: 'license',
-      message: 'Please select a license:',
-      choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'ISC License', 'No License'],
+        type: "input",
+        name: "githubUsername",
+        message: "Please enter your github username.",
     },
-    {
-      type: 'input',
-      name: 'githubUsername',
-      message: 'What is your GitHub username?',
-    },
-    {
-      type: 'input',
-      name: 'email',
-      message: 'What is your email address?',
-    },
-  ];
-  
+        
+];
+
+
 
 // TODO: Create a function to write README file
-const fs = require('fs');
-
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, (err) =>
-    err ? console.error(err) : console.log('Success!')
-  );
+function writeToFile(fileName, data,) {
+    return writeFile(path.join(process.cwd(), fileName,), data);
 }
 
 // TODO: Create a function to initialize app
-// Function call to initialize app
-const fs = require('fs');
+function init() {
 
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, (err) =>
-    err ? console.error(err) : console.log('Success!')
-  );
+    inquirer.prompt(questions).then((responses) => {
+        
+        writeToFile("./README.md", generateMarkdown({ ...responses }))
+        .then(() => {
+            console.log("Professional README");
+        }) 
+    });
+
 }
+
+
+// Function call to initialize app
+init();
