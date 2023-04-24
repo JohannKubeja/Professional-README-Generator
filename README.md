@@ -55,5 +55,5 @@ I used Inquirer for this project. A Node npm.
 <h1> Walkthrough Video </h1>
 
 <video width="320" height="240" autoplay>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
+  <source src="Untitled_ Apr 23, 2023 7_27 PM.mp4" type="video/mp4">
+
